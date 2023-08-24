@@ -1,0 +1,81 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #161625;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 40rem;
+  margin: auto;
+}
+.card {
+  padding: 3rem 5rem;
+  border-radius: 20px;
+  background-color: #fff;
+}
+.card_image img {
+  width: 5rem;
+}
+.card .card_info {
+  margin: 2rem 0;
+}
+.card .card_info h1 {
+  font-size: 3rem;
+  color: #161625;
+  margin-bottom: 1rem;
+}
+
+.card .card_info p {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.card button {
+  outline: none;
+  border: none;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 1.5rem 1rem;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+  background-color: #161625;
+}
+.new_color {
+  background: linear-gradient(to right, #e85167, #e86047);
+  box-shadow: 1px 4px 2px rgba(232, 81, 103, 0.5),
+    2px 2px 3px rgba(232, 96, 71, 0.5);
+}
+
+@media (max-width: 768px) {
+  body {
+    background-color: transparent;
+  }
+  .container {
+    position: relative;
+    display: block;
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+  }
+  button {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

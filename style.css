@@ -1,0 +1,146 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #161625;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.card {
+  padding: 2rem;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+}
+.card_info {
+  margin-top: 6rem;
+  padding: 0rem 4rem;
+  width: 40rem;
+}
+.card_info h1 {
+  font-size: 5rem;
+}
+.card_info p {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+}
+.card_image {
+  width: 40rem;
+  height: 50rem;
+  background-image: url("./images/illustration-sign-up-desktop.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+.card_info .card_list {
+  list-style: none;
+}
+.card_list {
+  margin: 3rem 0;
+}
+.card_info .card_list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.error {
+  color: #e85167;
+  border: 1px solid #e85167 !important;
+}
+.card_info .card_list li span {
+  font-size: 1.3rem;
+  margin-left: 1rem;
+  font-weight: 400;
+}
+.labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+label {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.error_message {
+  color: #e85167;
+  display: none;
+}
+input[type="email"] {
+  padding: 1.2rem 0.8rem;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+button {
+  outline: none;
+  border: none;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 1.5rem 1rem;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  background-color: #161625;
+}
+.new_color {
+  background: linear-gradient(to right, #e85167, #e86047);
+  box-shadow: 1px 4px 2px rgba(232, 81, 103, 0.5),
+    2px 2px 3px rgba(232, 96, 71, 0.5);
+}
+@media (max-width: 768px) {
+  body {
+    background-color: transparent;
+  }
+  .container {
+    width: 100%;
+    display: block;
+    min-height: 100%;
+  }
+  .card {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  .card_info {
+    width: 100%;
+  }
+  .card_info h1 {
+    font-size: 4rem;
+    color: #161625;
+  }
+  .card_image {
+    width: 100%;
+    height: 300px;
+    background-image: url("./images/illustration-sign-up-mobile.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    order: -1;
+  }
+
+  form button {
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+  }
+}
